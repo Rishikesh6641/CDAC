@@ -1,9 +1,12 @@
+import java.lang.Scanner;
+
 class GCD
 {
  public static void main(String args[])
  {
-  int num1=36;
-  int num2=72;
+  Scanner sc=new Scanner(System.in);
+  int num1=sc.nextInt();
+  int num2=sc.nextInt();
   
   int result=HCF(num1,num2);
   
