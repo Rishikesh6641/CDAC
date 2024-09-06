@@ -36,6 +36,7 @@ public class Employee {
 		
 		e.setRecord();
 		e.getRecord();
+		Employee.sc.close();
 	}
 
 }
