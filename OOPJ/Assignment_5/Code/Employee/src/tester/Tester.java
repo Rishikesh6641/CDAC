@@ -1,40 +1,31 @@
 package tester;
 
-import java.util.Scanner;
-
-import Employee.Employee;
 import EmployeeUtil.EmployeeUtil;
 
 public class Tester {
 	
+	@SuppressWarnings("static-access")
 	public static void main(String args[])
 	{
-		Scanner sc=new Scanner(System.in);
+		EmployeeUtil util=new EmployeeUtil();
+		int choice;
 		
-		EmployeeUtil eu=new EmployeeUtil();
-		//EmployeeUtil eu2=new EmployeeUtil();
+		while((choice=util.menulist())!=0)
+		{
+			switch(choice)
+			{
+			case 1:util.accept();
+			break;
+			case 2:util.getemp().raise();
+			break;
+			case 3:util.printRecord();
+			break;
+			case 4:util.CompanyRecord();
+			break;
+			}
+		}
 		
-		eu.accept();
-		//eu2.accept();
-		
-		eu.printRecord();
-		System.out.println();
-		//eu2.printRecord();
-		
-		System.out.println("Enter Per:");
-		Employee.setPer(sc.nextFloat());
-		
-		//eu.CompanyRecord();
-		
-		System.out.println("*************");
-		
-		//eu.CompanyRecord();
-		eu.getemp().raise();
-		System.out.println("Company Record");
-		System.out.println(Employee.getTotal_employee()+" "+Employee.getPer()+" "+Employee.getTotal_salary());
-		eu.printRecord();
-		
-		sc.close();
+		util.closeResource();
 	}
 
 }
