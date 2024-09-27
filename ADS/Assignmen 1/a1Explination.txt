@@ -1,0 +1,85 @@
+Q1
+in this code we are first intializing the varables and getting the input from the user 
+then we are assiging varible bak=0 cube=0 and sum=0
+int bak we are keeping the backup value to compare at the end
+the while loop will iterate until the value of n !=0
+inside the while loop we are calculating the cube by using Math.pow()function 
+after that we are adding this cube to the sum which is initially of 0
+and then dividing the num value by 10 so that we will get only first remaining values
+after this we are comparing the bak value and sum if they are equal it is armstrong and if not we pint false
+t=O(log10n)  s=O(1)
+
+Q2
+In this code after intializing variables we are using for loop which will start from 2 and will go until i is 
+smaller than half of the target number becuase we know that no number is divisible by the number greater than its half
+this decreases the number of iterations inside loop we check wether the num is divisble by the value of i if yes it is not 
+prime so we break the loop and update the flag value to 1 after breaking the loop we check if the flag is 1 then its not prime so we 
+print flase else we print true .
+t=O(n)  s=O(1)
+
+q3
+In this code we first intialize the variables after intializing the variables we give call to the factorial function
+inside factorial function we check base condition if n<=1 if the base condtion is true return 1 
+else return n*fact(n-1) this statement recursively calls the fuction until the base consition is true
+and with recursively calling and geting the value of n return we multiple it with the current value of n 
+at the end it will return the total sum to the main where we are printing the value
+t=  s=
+
+q4
+in this code we first intialize the variables after intializing num a=0,b=1,c=0
+we start the for loop from 2 by intializing the i=2 as we are print values of 1 and 2 
+after intializing the variable, inside the for loop we assign c=a+b and then a=b,b=c 
+printing c,inside for loop we are only shifting the values of b to a and c to b and then 
+assigning the sum of a+b to the c 
+t=O(n)  s=O(1)
+
+q5
+in this code we are recursively finding the gdc
+in the gcd funtion first we check the base condition 
+if the num are equal that means we have subtracted numbers and getting the equal number
+this equal number is the GCD
+if the base condition is not satisfied we keep on call the gcd function recursively and subtracting the bigger number by smaller 
+number 
+t=  s=
+
+q6
+if we want to find the sqaure we can find it byy checking how many times the number is divide by 2 
+to reach 0 or  less than 2 
+for  that we use while loop the loop will iterate until we get zero or number less then 2
+inside the loop we decrease the number every time dividing it with 2 and counting the iteration 
+required for geting 0 or number less then 2 and at last we print the count
+t=O(log2n)  s=O(1)
+
+q7
+in this code we make use of map has map can only contain unique keys this properties 
+help to store only unique characters from the sting wiht the key we provide value of type
+integer which will keep an count of the characters 
+using for loop we itrate through the string and add each unique word while traversing if the wrod repeats we simply add 1 
+to the intial value after adding all the elements then we only print the element having count more than 2
+t=  s=
+
+q8
+In this code we use two for loops, the loop will iterate from i=0 and go until
+string length every time we set the flag to 0 the inner loop starts from i+1
+and gose until string length -1 as we dont have anything to compare with last character 
+from the outer loop we will select one character each time inside the  inner loop we will 
+check remaining string for the character if the character is present then it is dupplicate if its 
+not then its unique and we break both the loop printing the character 
+t=O(n)  s=O(1)
+
+q9
+for checkingg palindrome we have to check wether the number remains same when we invert it  
+to reverse the number we use one loop this loop will go until the number is not  equals to 0 
+we use reversing logic in the loop and reduce the number to zero by dividing it with 10 everytime 
+this will reduce the number one by one from the last 
+after the for loop we will check wether the we reversed and the original number is equal or not 
+if yes then it will be palindrome or we print false
+t=O(log10n)  s=O(1)
+
+q10
+for checking is the year entered is leap or not we have to check some conditions for it 
+first we will check if the year is mod by 4 and the year is not mod by 100 then the result of this 
+with an or opreator we will create one more boolean value with if th year is mod by 400
+if all the  conditions or any one condition is true then we will print true else boh aare false 
+we will print false;
+t=O(1)  s=O(1)
