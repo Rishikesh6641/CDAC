@@ -1,0 +1,12 @@
+select Onum,amt,Odate from orders;
+
+mysql> select * from customers
+    -> where Snum like '1001';
+	
+mysql> select City,Sname,Snum,Comm from salespeople;
+
+mysql> select concat(rating,concat(' ',Cname)) as Customers_rating from customers
+    -> where City like 'San Jose';
+
+mysql> select distinct snum,onum from orders
+    -> order by snum;

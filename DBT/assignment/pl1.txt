@@ -1,0 +1,54 @@
+delimiter //
+create procedure pa()
+begin
+declare L int default 0;
+declare W int default 0;
+set L=10;
+set W=5;
+set @p=2*(L+W);
+set @a=L*W;
+end;//
+delimiter ;
+
+begin
+declare num int;
+set num=10*10;
+insert into tempp values(num,'sqrt');
+set num=10*10*10;
+insert into tempp values(num,'cube');
+end
+
+mysql> delimiter //
+mysql> create procedure tempreature()
+    -> begin
+    -> declare F float;
+    -> declare C float;
+    -> set C=24.5;
+    -> set F=9/5*C+32;
+    -> insert into tempp values(F,'Fahrenite');
+    -> set F=75.2;
+    -> set C=(F-32)*5/9;
+    -> insert into tempp values(C,'Celsius');
+	
+begin
+declare y int;
+declare f int;
+set y=i/36;
+set i=i-(y*36);
+if i > 0 then
+set f=i/12;
+set i=i-(f*12);
+end if;
+insert into temp values(y,f,i);
+end
+
+mysql> create procedure realnum(x int,y int)
+    -> begin
+    -> declare sum int;
+    -> set sum=x+y;
+    -> if sum >= 100 then
+    -> insert into tempp values(true);
+    -> else
+    -> insert into tempp values(false);
+    -> end if;
+    -> end;//

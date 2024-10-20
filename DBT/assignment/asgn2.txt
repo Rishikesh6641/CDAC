@@ -1,0 +1,28 @@
+/////////////////////////////////Assignment-2////////////////////////////////////
+
+1) Which field of the Customers table is the primary key?
+->Cnum;
+
+2) What is the 4th column of the Customers table?
+-> Rating;
+
+3) What is another word for row? For column?
+->Column are called has attribute or key,and row can be called has tuple Entity;
+
+4) Why isn’t it possible to see the first five rows of a table?
+->in RDBMS the row are not stored sequentially they are stored in any specific
+order
+rows of the table are scattered fragmented all over the DB server HD
+the resone wht RDBMS do this is to make insert opreation faster
+in multi user envoirment when multiple user are inserting row in the same table 
+simultaneously if mysql where to store the rows sequentially, then the insert operation will be very slow
+when you insert a table wherever Mysql finds the free space in the db server HD, it will store the row
+when you select from the row the searching is sequential 
+when you select from a table ,the order of rows in the output will depend on the row address it will always  
+be in asending order of row address
+once you insert the row the row address will be constant 
+when you update the row and if the lengthg is increasing and free space is not available then the entire 
+row is moved to some other address on the DB server HD
+hence it is not possible to select first n rows and the last n rows of the table
+its common for all RDBMS;
+////////////////////////////////////////////////////////////////////////////////////////

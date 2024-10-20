@@ -1,0 +1,23 @@
+mysql> select * from orders
+    -> where Odate='1990-10-03'or'1990-10-04';
+
+mysql> select * from orders
+    -> where Odate in('1990-10-03','1990-10-04');
+	
+mysql> select Cname from customers
+    -> where Snum='1001'  or snum='1004';
+	
+mysql> SELECT Cname FROM customers 
+	WHERE Cname LIKE 'A%'    
+		OR Cname LIKE 'B%'    
+		OR Cname LIKE 'C%'    
+		OR Cname LIKE 'D%'    
+		OR Cname LIKE 'E%'    
+		OR Cname LIKE 'F%'    
+		OR Cname LIKE 'G%';
+
+mysql> select Cname from customers
+    -> where Cname like 'C%';
+	
+mysql> select * from orders
+    -> where amt>0 and amt is not null;

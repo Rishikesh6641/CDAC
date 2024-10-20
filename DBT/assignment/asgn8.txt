@@ -1,0 +1,18 @@
+mysql> select Onum,Snum,amt,amt*0.12 Commission_amt  from
+    -> orders
+    -> order by Onum;
+	
+mysql> select concat(concat('For the city ',city),
+	concat(',the highest rating is: ',max(rating))) from 
+	customers
+    group by city;
+	
+mysql> select Rating,Cname,Cnum from customers
+    -> order by 1 desc;
+	
+select Odate,count(*) from orders
+    -> group by Odate;
+	
+mysql> select Odate,count(*) as Count from orders
+    -> group by Odate
+    -> order by Count desc;

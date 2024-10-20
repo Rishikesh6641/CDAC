@@ -1,0 +1,13 @@
+mysql> select * from orders
+    -> where
+    -> cnum=
+    -> (select cnum from customers where cname='Cisneros');
+
+
+mysql> select c.cnum,c.rating from customers c, orders o
+    -> where c.cnum=o.cnum and o.amt >= (select avg(amt) from orders)
+    -> group by c.cnum,c.rating;
+	
+mysql> select snum,sum(amt) from orders
+    -> group by  snum
+    -> having sum(amt) > (select max(amt) from orders);

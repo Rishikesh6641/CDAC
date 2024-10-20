@@ -1,0 +1,13 @@
+mysql> select orders.onum,customers.cname from customers,orders
+    -> where customers.cnum=orders.cnum
+    -> order by 1;
+	
+mysql> select s.sname,c.cname from salespeople s,customers c
+    -> where s.snum=c.snum;
+	
+mysql> select c.cname, s.sname,s.comm from customers c,salespeople s
+    -> where s.snum=c.snum and s.comm>0.12;
+	
+mysql> select s.comm*o.amt comm_amt,rating from
+    -> salespeople s,orders o, customers c
+    -> where s.snum=o.snum and s.snum=c.snum and c.rating>100;

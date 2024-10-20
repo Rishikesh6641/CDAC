@@ -1,0 +1,17 @@
+mysql> select count(Onum) from orders
+    -> where Odate='1990-10-03';
+	
+mysql> select count(dcity) from
+    -> (select distinct(city)  dcity from customers )abcd;
+	
+mysql> select Cnum,min(amt) from orders
+    -> group by Cnum
+    -> order by 1;
+
+mysql> select city,max(rating) from customers
+    -> group by city;
+	
+
+mysql> select dt,count(ds) from
+    -> (select distinct snum ds,odate dt from orders)abcd
+    -> group by dt;

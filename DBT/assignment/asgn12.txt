@@ -1,0 +1,14 @@
+mysql> select Cname from customers
+    -> where rating= any(select rating from customers,salespeople
+    -> where customers.snum=salespeople.snum and sname='serres');
+	
+mysql> select Sname from salespeople
+    -> where city!=all(select distinct city from customers);
+	
+select Onum from orders
+    -> where amt > any(select amt from orders,customers
+    -> where customers.cnum=orders.cnum and city='London');
+	
+ select max(amt) from orders
+    -> where amt > any(select amt from orders o, customers c where c.cnum=o.cnum and city='London');
+	
