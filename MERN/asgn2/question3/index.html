@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <form action="">
+            <label for="dl1">Select Cars:</label>
+            <select name="" id="dlq">
+                <option value="Volvo" id="v">volvo</option>
+                <option value="BMW">BMW</option>
+                <option value="Audi">Audi</option>
+                <option value="Mercedese">mercedese</option>
+            </select>
+            <button type="button" id="btn">click me to remove volvo</button>
+        </form>
+        <script>
+            document.getElementById("btn").onclick=function(){myfun()};
+            function myfun(){
+                const ele=document.getElementById("v");
+                ele.remove();
+            }
+
+        </script>
+    </body>
+</html>
