@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            function fetchData(url){
+                return new Promise((resolve,reject)=>{
+                    arr={name:"Rishikesh",age:23,phone:"7038533818"};
+                    if(url)
+                    resolve(arr);
+
+                    else
+                    var error=new Error("Failed to fetch data");
+                    reject(error);
+                });
+            }
+
+            fetchData(null).then((arr)=>{
+                console.log("--->>");
+                console.log(arr);
+            }).catch((obj)=>{
+                console.log(obj);
+            });
+
+        </script>
+    </body>
+</html>

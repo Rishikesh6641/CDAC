@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        <head>
+
+        </head>
+    </title>
+    <body>
+        <script>
+            function processData(demo,str){
+                setTimeout(()=>{
+                    demo(str);
+                },1000);
+            };
+            var str="rishi";
+
+            var demo=function func(str){
+                str=str.toUpperCase();
+                console.log(str);
+            };
+
+            processData(demo,str);
+
+        </script>
+    </body>
+</html>

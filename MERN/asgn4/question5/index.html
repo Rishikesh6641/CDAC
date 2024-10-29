@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            function fetchData(url){
+                return new Promise((resolve,reject)=>{
+                    obj={name:"Rishikesh",Phone:"7038533818",age:23};
+
+                    if(url)
+                    resolve(obj);
+
+                    else
+                    {
+                        var error=new Error("Failed to fetch data!!");
+                        reject(error);
+                    }
+                });
+            }
+
+            function processingData(obj){
+                return new Promise((resolve,reject)=>{
+                    if(obj){
+                        const{name,Phone}=obj;
+                        resolve(name+" "+Phone);
+                    }
+                    else{
+                        var error=new Error("Operation Failed");
+                        reject(error);
+                    }
+                });
+            }
+
+            fetchData(500).then((obj)=>{
+                console.log("Fetched Sucessfully");
+                return processingData(obj);
+            }).then((result)=>{
+                console.log("Process sucessfull");
+                console.log(result);
+            }).catch((obj)=>{
+                console.log(obj);
+            })
+        </script>
+    </body>
+</html>
