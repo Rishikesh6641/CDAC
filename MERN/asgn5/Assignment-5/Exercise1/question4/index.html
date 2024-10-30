@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            myPromise1=new Promise((resolve,reject) =>{
+                setTimeout(()=>{
+                    resolve(10); 
+                },3000);
+            });
+
+            myPromise2=new Promise((resolve,reject)=>{
+
+                setTimeout(()=>{
+                    resolve(20);
+                });
+            });
+
+            Promise.all([myPromise1,myPromise2]).then((value)=>{
+                console.log(value);
+            });
+        </script>
+    </body>
+</html>
