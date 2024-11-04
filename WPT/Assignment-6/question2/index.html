@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="" id="in1" placeholder="length">
+    <input type="text" name="" id="in2" placeholder="width">
+    <textarea name="" id="t1"></textarea>
+    <textarea name="" id="t2"></textarea>
+    <button type="button" onclick="regular()">Submit</button>
+    <script>
+        function regular(){
+
+            var length=document.getElementById("in1").value;
+            var width=document.getElementById("in2").value;
+            document.getElementById("t1").value="regular"+length*width;
+            arrowfun();
+        }
+
+        const arrowfun=()=>{
+            var length=document.getElementById("in1").value;
+            var width=document.getElementById("in2").value;
+            document.getElementById("t2").value="Arrow"+length*width;
+        }
+    </script>
+</body>
+</html>

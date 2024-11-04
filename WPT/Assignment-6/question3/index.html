@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="in1" placeholder="Book name">
+    <input type="text" name="" id="in2" placeholder="author">
+    <input type="text" name="" id="in3" placeholder="year">
+    <p id="s1"></p>
+    <p id="s2"></p>
+    <p id="s3"></p>
+
+    <button type="button" onclick="storedata()">store</button>
+
+    <script>
+        function storedata(){
+            var book=document.getElementById("in1").value;
+            var author=document.getElementById("in2").value;
+            var year=document.getElementById("in3").value;
+
+            var obj={book,author,year};
+
+            console.log(obj);
+            display(obj);
+        }
+
+        var display=(obj)=>{
+           var{book,author,year}=obj;
+            document.getElementById("s1").innerHTML=book;
+            document.getElementById("s2").innerHTML=author;
+            document.getElementById("s3").innerHTML=year;
+
+        }
+    </script>
+</body>
+</html>
