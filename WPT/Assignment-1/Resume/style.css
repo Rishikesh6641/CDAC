@@ -1,0 +1,43 @@
+#d1{
+    border:2px solid powderblue;
+    background-color: powderblue;
+    text-align: center;
+}
+#d2,#p1{
+    text-align: center;
+}
+#t1-heading{
+    background-color: powderblue;
+
+}
+th, td {
+    padding: 15px;
+    padding: left 50%;
+    padding:right 50%;
+  }
+  #b{
+    align-items: center;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  #skills{
+    background-color:  powderblue;
+    padding: 5px;
+    text-align: center;
+  }
+  #edu{
+    background-color:  powderblue;
+    padding: 5px;
+    text-align: center;
+  }
+  #h1{
+    text-align: center;
+    background-color: powderblue;
+  }
+  footer{
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }

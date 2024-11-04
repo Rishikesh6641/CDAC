@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <p id="p1">
+            [On mouse over here bold words of the following paragraph will be highlighted]
+        </p>
+        <p id="p2">
+           <mark class="m1">We</mark> have just started <mark class="m1">this</mark> . section for the users (<mark class="m1">beginner</mark> to intermediate) who <mark class="m1">want</mark> to work with <mark class="m1">various</mark> JavaScript <mark class="m1">problems</mark> and write scripts online to <mark class="m1">test</mark> their JavaScript skill.
+        </p>
+        <script>
+            document.getElementById("p1").onmouseover=function(){myfun()};
+            document.getElementById("p1").onmouseout=function(){myfun2()};
+            function myfun()
+            {
+                var ele=document.getElementsByClassName("m1");
+                for(i=0;i<ele.length;i++)
+                {
+                    ele[i].style.color="black";
+                    ele[i].style.fontWeight="Bold";
+                }
+            }
+            function myfun2()
+            {
+                var ele=document.getElementsByClassName("m1");
+                for(i=0;i<ele.length;i++)
+                {
+                    ele[i].style.color="white";
+                }
+            }
+        </script>
+    </body>
+</html>

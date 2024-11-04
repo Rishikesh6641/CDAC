@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <form action="">
+            <fieldset>
+                <input type="text" placeholder="Name" id="fn">
+                <br>
+                <input type="text" placeholder="Last Name" id="ln">
+                <br>
+                <input type="text" placeholder="Mob.no" id="mn">
+                <br>
+                <input type="email" placeholder="Email" id="e">
+                <br>
+                <button type="button"  id="btn">click</button>
+                <p id="printarea"></p>
+            </fieldset>
+        </form>
+        <script>
+            document.getElementById("btn").onclick=function(){myfun()};
+            
+            
+            function myfun(){
+                var x=document.getElementById("fn").value;
+                var y=document.getElementById("ln").value;
+                var z=document.getElementById("e").value;
+                var a=document.getElementById("mn").value;
+                document.getElementById("printarea").innerHTML=x+" "+y+"<br>"+a+" "+z;
+            };
+        </script>
+    </body>
+</html>

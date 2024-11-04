@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            function fetchData(demo,url)
+            {
+                setTimeout(()=>{
+                    demo(url);
+                },2000);
+            }
+
+            function demo(url)
+            {
+                obj={
+                    name:"Rishikesh",age:23,phone:"7038533818"
+                };
+
+                const{name,age,phone}=obj;
+
+                console.log(name+" "+age+" "+phone);
+            }
+
+            const url="2.01.2.0122";
+            fetchData(demo,url);
+        </script>
+    </body>
+</html>

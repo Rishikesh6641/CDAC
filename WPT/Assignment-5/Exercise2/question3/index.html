@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+
+            const goGetCandies=()=>{
+                return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                        const data={candy:"sour key",quantity:10};
+                        resolve(data);
+                    },2000);
+                });
+            }
+
+            const sellCandies=(data)=>{
+                return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                        console.log((data.quantity*25)/100+" dollars sell");
+                        resolve();
+                    },2000);
+                })
+            }
+
+            console.log("Program started...");
+
+            const calCents= async ()=>{
+                const result=await goGetCandies();
+                const result2=await sellCandies(result);
+                console.log("Program complete");
+            }
+
+            calCents();
+        </script>
+    </body>
+</html>

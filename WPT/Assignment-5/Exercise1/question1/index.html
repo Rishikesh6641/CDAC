@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+
+    <body>
+        <script>
+            console.log("program Started");
+
+            const myPromise=new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve();
+                },3000);
+
+                setTimeout(()=>{
+                    reject();
+                },2000);
+            });
+
+            console.log(myPromise);
+            console.log("Program in Progress");
+
+            myPromise.then((obj)=>{
+                console.log(obj);
+                console.log("Program completed");
+            }).catch((obj)=>{
+                console.log(obj);
+                console.log("Program failure");
+            });
+        </script>
+    </body>
+</html>

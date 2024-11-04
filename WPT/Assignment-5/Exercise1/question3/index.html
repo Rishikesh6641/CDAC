@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <script>
+            console.log("Program started");
+
+            myPromise=new Promise( (resolve,reject) =>{
+                setTimeout(()=>{
+                    const value={data:"Hello , friend!",error:null};
+                    resolve(value);
+                },5000);
+            });
+
+            console.log(myPromise);
+            console.log("Program in progress");
+
+            myPromise.
+            then((value)=>{
+                console.log(value);
+                return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                        resolve("First Promise Chain completed");
+                    },2000);
+                })
+            }).
+            then((value)=>{
+                console.log(value);
+                return myPromise;
+            }).
+            then((value)=>{
+                console.log(value);
+                return new Promise((resolve,reject)=>{
+                    setTimeout(()=>{
+                        resolve("Second Promise chain completed");
+                    },10000);
+                });
+            }).
+            then((value)=>{
+                console.log(value);
+            });
+        </script>
+    </body>
+</html>

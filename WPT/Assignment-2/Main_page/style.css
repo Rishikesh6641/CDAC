@@ -1,0 +1,130 @@
+nav{
+    background-color: #95A5A6;
+    width: 100%;
+    height: 60px;
+    position:fixed;
+    top:0px;
+    z-index: 10;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius:15px;
+    box-shadow: 10px 10px 20px  #005757;
+}
+footer{
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius:15px;
+    box-shadow: 10px 10px 20px 20px #005757;
+}
+div{
+    background-color: transparent;
+    width:100%;
+    height:700px;
+    margin:100px auto;
+}
+#i1{
+    background-color: transparent;
+    width: 20%;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    right:10px;
+    bottom:10px;
+    font-size: 40px;
+    font-weight: 100;
+    color:whitesmoke;
+}
+#i2{
+    background-color: transparent;
+    width: 20%;
+    position: relative;
+    top: 100px;
+    left: 200px;
+    right:10px;
+    bottom:10px;
+}
+a{
+    text-decoration: none;
+    font-size: larger;
+    color: whitesmoke;
+}
+a:hover{
+    color: black;
+}
+#id1 {
+    background-color: transparent;
+    width: 35%;
+    height: 35%;
+    position: relative;
+    top: 68px;
+    left: 298px;
+    right: 10px;
+    bottom: 10px;
+}
+#id2 {
+    background-color: transparent;
+    width: 40%;
+    height: 40%;
+    position: relative;
+    top: -575px;
+    left: 99px;
+    right: 10px;
+    bottom: 10px;
+}
+#id3 {
+    background-color: transparent;
+    width: 31%;
+    height: 38%;
+    position: relative;
+    top: -632px;
+    left: -400px;
+    right: -45px;
+    bottom: -2px;
+    color: whitesmoke;
+}
+.iimg{
+    width: 80%;
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px  #005757;
+}
+#i3{
+    text-align: center;
+    font-size: large;
+    padding: 30px;
+}
+body{
+    background-color: #008B8B;
+    font-family: "Agdasima", sans-serif;
+}
+#l {
+    width: 5%;
+    height: 5%;
+    position: fixed;
+    top: -21px;
+    left: 83px;
+    right: 10px;
+    bottom: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #5a6465;
+}
+#cn {
+    position: fixed;
+    top: 20px;
+    left: 150px;
+    font-size: larger;
+    font-weight: 100;
+    color: #5a6465;
+}
+.link {
+    height: 80%;
+    width: 3%;
+    position: relative;
+    left: 675px;
+    top: 6px;
+    right: 20px;
+}
