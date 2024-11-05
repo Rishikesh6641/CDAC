@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function program(){
+            console.log("Program started");
+            return new Promise((resolve,reject)=>{
+                function demo(){
+                    console.log("Program Close");
+                }
+                resolve(demo);
+            });
+        }
+
+        program().then((obj)=>{
+            obj();
+        });
+    </script>
+</body>
+</html>
